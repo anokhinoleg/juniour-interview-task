@@ -20,10 +20,6 @@ class HomepageController extends Controller
      */
     public function homepageAction()
     {
-        $number = mt_rand(0, 100);
-
-        return $this->render('home/homepage.html.twig', array(
-            'number' => $number,
-        ));
+        return $this->redirectToRoute('sonata_user_admin_security_login');
     }
 }

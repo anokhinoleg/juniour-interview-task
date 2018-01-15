@@ -1,34 +1,48 @@
 <?php
+
 /**
  * Created by PhpStorm.
- * User: olegyurievich
- * Date: 22.12.17
- * Time: 13:24
+ * User: developer
+ * Date: 15.01.18
+ * Time: 15:27
  */
 
 namespace AppBundle\Entity;
 
-use FOS\UserBundle\Model\User as BaseUser;
+use Sonata\UserBundle\Entity\BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="`user`")
+ * @ORM\Table(name="fos_user")
  */
 class User extends BaseUser
 {
     /**
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
 
     /**
+     * @ORM\Column(type="string", length=255)
+     */
+    protected $position;
+
+    /**
      * @return mixed
      */
-    public function getId()
+    public function getPosition()
     {
-        return $this->id;
+        return $this->position;
+    }
+
+    /**
+     * @param mixed $position
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
     }
 }
