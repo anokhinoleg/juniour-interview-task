@@ -41,6 +41,7 @@ twig:
     strict_variables: '%kernel.debug%'
     form_themes:
         - bootstrap_3_layout.html.twig
+        - 'SonataCoreBundle:Form:datepicker.html.twig'
 # Doctrine Configuration
 doctrine:
     dbal:
@@ -107,4 +108,4 @@ sonata_block:
         sonata.block.service.text: # used to if you plan to use Sonata user routes
 
 sonata_admin:
-    title:      Acme
+    title:  Personnel Management

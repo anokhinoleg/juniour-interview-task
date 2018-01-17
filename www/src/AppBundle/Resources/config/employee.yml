@@ -2,7 +2,7 @@ services:
     app.admin.employee:
         class: AppBundle\Admin\EmployeeAdmin
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Employee" }
+            - { name: sonata.admin, manager_type: orm, group: "Employee management", label: "Employees" }
         arguments:
             - ~
             - AppBundle\Entity\Employee

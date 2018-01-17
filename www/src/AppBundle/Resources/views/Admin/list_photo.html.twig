@@ -1,0 +1,10 @@
+{% extends 'SonataAdminBundle:CRUD:base_list_field.html.twig' %}
+
+{% block field %}
+    <div>
+        {% if object.filename %}
+            <img src="{{ object.webPath }}" style="width: 100px; height: 100px;"/>
+        {% endif %}
+        {# or whatever to create src of image #}
+    </div>
+{% endblock %}
