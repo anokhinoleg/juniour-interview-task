@@ -1,1 +1,2 @@
-.vagrant/
+.vagrant/machines/brander/virtualbox/*
+.vagrant/*
