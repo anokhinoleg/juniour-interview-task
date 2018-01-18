@@ -8,7 +8,6 @@ imports:
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: en
-    sonata.user.admin.user.class: AppBundle\Admin\UserAdmin
 
 framework:
     #esi: ~
@@ -78,7 +77,7 @@ swiftmailer:
 fos_user:
     db_driver:      orm # can be orm or odm
     firewall_name:  main
-    user_class:     AppBundle\Entity\User
+    user_class:     Application\Sonata\UserBundle\Entity\User
 
     group:
         group_class:   Application\Sonata\UserBundle\Entity\Group
@@ -95,7 +94,7 @@ sonata_user:
     security_acl: true
     manager_type: orm # can be orm or mongodb
     class:            # Entity Classes
-        user: AppBundle\Entity\User
+        user: Application\Sonata\UserBundle\Entity\User
         group: Application\Sonata\UserBundle\Entity\Group
 
 sonata_block:

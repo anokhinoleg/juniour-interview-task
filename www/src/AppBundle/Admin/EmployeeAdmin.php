@@ -31,9 +31,8 @@ class EmployeeAdmin extends AbstractAdmin
             $fullPath = $container->get('request_stack')->getCurrentRequest()->getBasePath().$webPath;
             dump($fullPath);
             // add a 'help' option containing the preview's img tag
-            $fileFieldOptions['help'] = '<img src="'.$fullPath.'" class="admin-preview" style="width: 200px; height: 200px;/>';
+            $fileFieldOptions['help'] = '<img src="'.$fullPath.'" class="admin-preview" style="width: 200px; height: 200px;"/>';
         }
-
 
         $formMapper
             ->add('firstName')
@@ -45,6 +44,7 @@ class EmployeeAdmin extends AbstractAdmin
             ])
             ->add('rate', 'number')
             ->add('firstWorkingDayDate', DatePickerType::class)
+
         ;
     }
 
